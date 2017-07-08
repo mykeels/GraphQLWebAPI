@@ -169,7 +169,6 @@
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PublishersController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Extensions\Number.cs" />
     <Compile Include="Formatters\GraphQLFormatter.cs" />
     <Compile Include="Global.asax.cs">
