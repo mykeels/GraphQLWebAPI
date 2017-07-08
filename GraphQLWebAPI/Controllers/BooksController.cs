@@ -12,13 +12,13 @@ namespace GraphQLWebAPI.Controllers
     {
         private readonly BookRepository bookRepository = new BookRepository();
 
-        // GET api/values
+        // GET api/books
         public IEnumerable<BookModel> Get()
         {
             return bookRepository.AllBooks();
         }
 
-        // GET api/values/5
+        // GET api/books/5
         public BookModel Get(string isbn)
         {
             return bookRepository.BookByIsbn(isbn);
