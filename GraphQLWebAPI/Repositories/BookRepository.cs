@@ -8,15 +8,18 @@ namespace GraphQLWebAPI.Repositories
 {
     public class BookRepository : IBookRepository
     {
-        private IEnumerable<BookModel> _books = new List<BookModel>();
-        private IEnumerable<AuthorModel> _authors = new List<AuthorModel>();
-        private IEnumerable<PublisherModel> _publisher = new List<PublisherModel>();
+        private static IEnumerable<BookModel> _books = new List<BookModel>();
+        private static IEnumerable<AuthorModel> _authors = new List<AuthorModel>();
+        private static IEnumerable<PublisherModel> _publisher = new List<PublisherModel>();
 
         public BookRepository()
         {
-            _books = BookModel.GetBooks(10).ToList();
-            _authors = _books.Select(book => book.Author).ToList();
-            _publisher = _books.Select(book => book.Publisher).ToList();
+            if (_books.Count() == 0)
+            {
+                _books = BookModel.GetBooks(10).ToList();
+                _authors = _books.Select(book => book.Author).ToList();
+                _publisher = _books.Select(book => book.Publisher).ToList();
+            }
         }
 
         public IEnumerable<AuthorModel> AllAuthors()
