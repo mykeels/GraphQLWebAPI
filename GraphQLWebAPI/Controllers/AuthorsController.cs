@@ -8,7 +8,7 @@ using GraphQLWebAPI.Repositories;
 
 namespace GraphQLWebAPI.Controllers
 {
-    public class AuthorsControllers: ApiController
+    public class AuthorsController: ApiController
     {
         private readonly BookRepository bookRepository = new BookRepository();
         // GET api/authors
