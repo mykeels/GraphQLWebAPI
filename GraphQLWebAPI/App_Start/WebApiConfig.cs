@@ -10,7 +10,7 @@ namespace GraphQLWebAPI
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-
+            config.Formatters.Add(new GraphQLWebAPI.Formatters.GraphQLFormatter());
             // Web API routes
             config.MapHttpAttributeRoutes();
 
