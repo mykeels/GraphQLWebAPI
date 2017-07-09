@@ -19,6 +19,27 @@ A sample starter project for a demo of GraphQL Integration with ASP.NET Web API 
 - ~/api/publishers
 - ~/api/publishers?id={publisherId}
 - ~/api/publishers/book?isbn={isbn}
+- ~/api/graph (POST)
+```
+
+### Sample GraphQL Request to get Books
+
+- Set `Content-Type` header to `application/graphql`
+- Set method to POST
+- Set url to `~/api/graph
+- Set body to
+```graphql
+{
+  books{
+    isbn,
+    name,
+    author{
+      id,
+      name
+    }
+  }
+}
+- Send Request
 ```
 
 ### Sample Book Data
