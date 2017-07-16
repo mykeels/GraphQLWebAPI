@@ -24,13 +24,13 @@ namespace GraphQLWebAPI.Controllers
                 options.Schema = new Schema() { Query = new BooksQuery() };
                 options.Query = query;
             });
-            CheckForErrors(result);
+            _checkForErrors(result);
             var json = new DocumentWriter(indent: true).Write(result);
 
             return Ok(JObject.Parse(json));
         }
 
-        private void CheckForErrors(ExecutionResult result)
+        private void _checkForErrors(ExecutionResult result)
         {
             if (result.Errors?.Count > 0)
             {
