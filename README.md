@@ -62,3 +62,7 @@ A sample starter project for a demo of GraphQL Integration with ASP.NET Web API 
     }
 }
 ```
+
+### GraphiQL
+
+GraphiQL was added as an Area. To view, hit the `~/graphiql` endpoint.
