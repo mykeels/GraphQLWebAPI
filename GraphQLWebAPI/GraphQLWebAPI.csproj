@@ -131,12 +131,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\GraphiQL\Models\" />
+    <Folder Include="Areas\GraphiQL\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\GraphiQL\Controllers\GraphiQLController.cs" />
+    <Compile Include="Areas\GraphiQL\GraphiQLAreaRegistration.cs" />
     <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
     <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
     <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
@@ -186,6 +190,9 @@
     <Compile Include="Repositories\IBookRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\GraphiQL\Scripts\app.css" />
+    <Content Include="Areas\GraphiQL\Scripts\app.js" />
+    <Content Include="Areas\GraphiQL\webpack.config.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -213,6 +220,9 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Areas\GraphiQL\Views\web.config" />
+    <Content Include="Areas\GraphiQL\package.json" />
+    <Content Include="Areas\GraphiQL\Views\GraphiQL\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
