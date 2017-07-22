@@ -190,8 +190,10 @@
     <Compile Include="Repositories\IBookRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\GraphiQL\bundle.js" />
     <Content Include="Areas\GraphiQL\Scripts\app.css" />
     <Content Include="Areas\GraphiQL\Scripts\app.js" />
+    <Content Include="Areas\GraphiQL\style.css" />
     <Content Include="Areas\GraphiQL\webpack.config.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
